@@ -5,6 +5,8 @@ import {
   Res,
   HttpStatus,
   UseGuards,
+  Get,
+  Req,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { AuthService } from './auth.service';
@@ -43,5 +45,12 @@ export class AuthController {
       maxAge: 0,
     });
     res.status(HttpStatus.OK).send();
+  }
+
+  @Get('verify-token')
+  async verifyToken(@Req() request) {
+    const token = request.cookies.Authentication;
+    const user = await this.authService.validateToken(token);
+    return { validate: Boolean(user) };
   }
 }
