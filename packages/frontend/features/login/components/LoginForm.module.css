@@ -1,0 +1,7 @@
+.forgot {
+  @apply text-right;
+}
+
+.forgotText {
+  @apply font-medium text-indigo-600;
+}

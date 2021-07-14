@@ -1,0 +1,19 @@
+.root {
+  @apply bg-gray-100 flex flex-col items-center justify-center;
+}
+
+.title {
+  @apply text-4xl font-bold text-center mb-3;
+}
+
+.login {
+  @apply mb-8 text-center;
+}
+
+.loginText {
+  @apply font-medium text-indigo-600;
+}
+
+.form {
+  @apply bg-white px-10 py-8 rounded-lg shadow-md w-full max-w-md;
+}

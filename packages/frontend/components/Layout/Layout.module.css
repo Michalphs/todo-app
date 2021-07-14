@@ -1,0 +1,11 @@
+.root {
+  @apply md:flex md:flex-col md:min-h-screen bg-gray-100;
+}
+
+.body {
+  @apply md:flex-auto md:flex;
+}
+
+.body > * {
+  @apply md:flex-auto;
+}

@@ -1,0 +1,23 @@
+.label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.labelError {
+  @apply text-red-500;
+}
+
+.formControl {
+  @apply mt-1;
+}
+
+.input {
+  @apply w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
+}
+
+.inputError {
+  @apply text-red-500 focus:ring-red-500 border-red-500 focus:border-red-500;
+}
+
+.error {
+  @apply block text-sm font-medium text-red-500;
+}
