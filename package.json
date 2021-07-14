@@ -1,5 +1,26 @@
 {
   "private": true,
   "name": "todo-app",
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "frontend:dev": "yarn workspace frontend dev",
+    "frontend:build": "yarn workspace frontend build",
+    "frontend:start": "yarn workspace frontend start",
+    "frontend:lint": "yarn workspace frontend lint",
+    "backend:prebuild": "yarn workspace backend prebuild",
+    "backend:build": "yarn workspace backend build",
+    "backend:format": "yarn workspace backend format",
+    "backend:start": "yarn workspace backend start",
+    "backend:start:dev": "yarn workspace backend start:dev",
+    "backend:start:debug": "yarn workspace backend start:debug",
+    "backend:start:prod": "yarn workspace backend start:prod",
+    "backend:lint": "yarn workspace backend lint",
+    "backend:test": "yarn workspace backend test",
+    "backend:test:watch": "yarn workspace backend test:watch",
+    "backend:test:cov": "yarn workspace backend test:cov",
+    "backend:test:debug": "yarn workspace backend test:debug",
+    "backend:test:e2e": "yarn workspace backend test:e2e"
+  }
 }
