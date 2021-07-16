@@ -1,0 +1,7 @@
+.root {
+  @apply relative bg-white;
+}
+
+.popover {
+  @apply absolute top-0 inset-x-0 transition transform origin-top-right md:hidden;
+}
