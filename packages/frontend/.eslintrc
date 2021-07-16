@@ -21,6 +21,7 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "max-len": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

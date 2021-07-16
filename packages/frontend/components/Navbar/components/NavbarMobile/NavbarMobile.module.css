@@ -1,0 +1,39 @@
+.root {
+  @apply shadow-lg ring-1 ring-black h-screen ring-opacity-5 bg-white divide-y-2 divide-gray-50;
+}
+
+.container {
+  @apply pt-5 pb-6 px-5;
+}
+
+.content {
+  @apply flex items-center justify-between;
+}
+
+.closeContainer {
+  @apply -mr-2;
+}
+
+.closeBtn {
+  @apply bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500;
+}
+
+.closeIcon {
+  @apply h-6 w-6;
+}
+
+.closeText {
+  @apply sr-only;
+}
+
+.btnGroup {
+  @apply py-6 px-5 space-y-6;
+}
+
+.text {
+  @apply mt-6 text-center text-base font-medium text-gray-500;
+}
+
+.link {
+  @apply text-indigo-600 hover:text-indigo-500;
+}
