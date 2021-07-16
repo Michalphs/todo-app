@@ -8,6 +8,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.use(cookieParser());
   app.enableCors({ credentials: true, origin: /localhost/ });
+  app.setGlobalPrefix('todo/api');
   await app.listen(3001);
 }
 bootstrap();

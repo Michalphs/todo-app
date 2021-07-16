@@ -46,11 +46,4 @@ export class AuthController {
     });
     res.status(HttpStatus.OK).send();
   }
-
-  @Get('verify-token')
-  async verifyToken(@Req() request) {
-    const token = request.cookies.Authentication;
-    const user = await this.authService.validateToken(token);
-    return { validate: Boolean(user) };
-  }
 }
