@@ -7,7 +7,7 @@ import { auth } from 'api';
 
 export default function Home() {
   const info = useQuery('todos', todo.getAll);
-  const { mutate: logout, isLoading, isSuccess } = useMutation(auth.logout);
+  const { mutate: logout } = useMutation(auth.logout);
 
   console.log(info);
 
@@ -23,14 +23,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={'p-4 bg-gray-100'}>
+      <main className="p-4 bg-gray-100">
         <Button onClick={handleLogout}>Log out</Button>
         <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to
+          <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p>
-          Get started by editing <code>pages/index.js</code>
+          Get started by editing
+          <code>pages/index.js</code>
         </p>
 
         <div>
@@ -64,7 +66,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by
           <span>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
