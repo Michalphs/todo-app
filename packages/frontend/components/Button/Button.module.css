@@ -1,18 +1,22 @@
 .btn {
-    @apply bg-indigo-600 text-white rounded-md px-4 py-2 hover:bg-indigo-700 focus:ring-indigo-500;
+  @apply font-medium bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:ring-indigo-500;
 }
 .btn-xs {
-    @apply text-sm;
+  @apply px-2 py-1.5 text-xs;
 }
 
 .btn-sm {
-    @apply text-base;
+  @apply px-2.5 py-2 text-sm;
 }
 
 .btn-md {
-    @apply text-lg;
+  @apply px-4 py-3 text-base;
 }
 
 .btn-lg {
-    @apply px-6 py-3 text-lg;
+  @apply px-8 py-3.5 text-xl;
+}
+
+.fullSize {
+  @apply w-full;
 }

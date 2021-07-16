@@ -7,7 +7,7 @@
 }
 
 .formControl {
-  @apply mt-1;
+  @apply mt-2.5;
 }
 
 .input {

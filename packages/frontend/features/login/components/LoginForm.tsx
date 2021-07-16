@@ -66,8 +66,8 @@ const LoginForm = () => {
           </Link>
         </div>
       </FormControl>
-      <Button type="submit" disabled={isLoading}>
-        Login
+      <Button type="submit" disabled={isLoading} fullSize>
+        Log in
       </Button>
     </form>
   );
