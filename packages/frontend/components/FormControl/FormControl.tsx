@@ -6,8 +6,8 @@ type FormControlProps = {
   className?: string;
 };
 
-const FormControl: React.FC<FormControlProps> = ({ className, children }) => {
-  return <div className={clsx(s.root, className)}>{children}</div>;
-};
+const FormControl: React.FC<FormControlProps> = ({ className, children }) => (
+  <div className={clsx(s.root, className)}>{children}</div>
+);
 
 export default FormControl;

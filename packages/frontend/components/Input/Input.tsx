@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './Input.module.css';
 import clsx from 'clsx';
 import { UseFormRegisterReturn } from 'react-hook-form';
+import s from './Input.module.css';
 
 type InputProps = {
   register: UseFormRegisterReturn;
@@ -27,7 +27,7 @@ const Input = ({
 
   return (
     <div>
-      <label className={clsx(s.label, error && s.labelError)}>
+      <label htmlFor={name} className={clsx(s.label, error && s.labelError)}>
         {label}
         <div className={s.formControl}>
           <input
@@ -39,6 +39,7 @@ const Input = ({
             name={name}
             onChange={onChange}
             onBlur={onBlur}
+            autoComplete={autoComplete}
             {...rest}
           />
         </div>

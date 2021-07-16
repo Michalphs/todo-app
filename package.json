@@ -21,6 +21,8 @@
     "backend:test:watch": "yarn workspace backend test:watch",
     "backend:test:cov": "yarn workspace backend test:cov",
     "backend:test:debug": "yarn workspace backend test:debug",
-    "backend:test:e2e": "yarn workspace backend test:e2e"
+    "backend:test:e2e": "yarn workspace backend test:e2e",
+    "prepare": "husky install packages/frontend/.husky",
+    "pre-commit": "cd packages/frontend && yarn lint --fix && git add -A ."
   }
 }

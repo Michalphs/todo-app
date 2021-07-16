@@ -19,22 +19,16 @@ const Button: React.FC<ButtonProps> = ({
   fullSize = false,
   className,
   children,
-}) => {
-  return (
-    <button
-      type={type}
-      disabled={disabled}
-      className={clsx(
-        s.btn,
-        s[`btn-${size}`],
-        fullSize && s.fullSize,
-        className
-      )}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <button
+    /* eslint-disable-next-line react/button-has-type */
+    type={type}
+    disabled={disabled}
+    className={clsx(s.btn, s[`btn-${size}`], fullSize && s.fullSize, className)}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
 
 export default Button;
