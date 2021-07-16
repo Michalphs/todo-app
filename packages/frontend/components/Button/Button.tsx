@@ -7,6 +7,7 @@ type ButtonProps = {
   size?: 'xs' | 'sm' | 'md' | 'lg';
   disabled?: boolean;
   type?: 'submit' | 'reset' | 'button';
+  fullSize?: boolean;
   className?: string;
 };
 
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   type = 'button',
   size = 'md',
+  fullSize = false,
   className,
   children,
 }) => {
@@ -22,7 +24,12 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type={type}
       disabled={disabled}
-      className={clsx(s.btn, s[`btn-${size}`], className)}
+      className={clsx(
+        s.btn,
+        s[`btn-${size}`],
+        fullSize && s.fullSize,
+        className
+      )}
       onClick={onClick}
     >
       {children}

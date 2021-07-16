@@ -54,7 +54,9 @@ const RegisterForm = () => {
           error={errors?.password?.message}
         />
       </FormControl>
-      <Button type="submit">Register</Button>
+      <Button type="submit" fullSize className="mt-2.5">
+        Register account
+      </Button>
     </form>
   );
 };
