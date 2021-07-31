@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateTodoDto } from './dto/create-todo.dto';
-import { UpdateTodoDto } from './dto/update-todo.dto';
 import { PrismaService } from '../prisma.service';
 import { Status, User } from '@prisma/client';
 
@@ -52,7 +51,7 @@ export class TodosService {
     return `This action returns a #${id} todo`;
   }
 
-  update(id: number, updateTodoDto: UpdateTodoDto) {
+  update(id: number) {
     return `This action updates a #${id} todo`;
   }
 
