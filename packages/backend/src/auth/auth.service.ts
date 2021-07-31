@@ -23,7 +23,7 @@ export class AuthService {
     const user = await this.userService.findOne(credentials.email);
 
     if (user) {
-      throw new ConflictException();
+      throw new ConflictException('Email is already in use');
     }
 
     return await this.userService.create({
@@ -35,10 +35,15 @@ export class AuthService {
 
   async login(credentials: LoginUserDto): Promise<string> {
     const user = await this.userService.findOne(credentials.email);
+
+    if (!user) {
+      throw new UnauthorizedException('Email or password is incorrect');
+    }
+
     const isMatch = await bcrypt.compare(credentials.password, user.password);
 
     if (!isMatch) {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('Email or password is incorrect');
     }
 
     const token = crypto.randomBytes(64).toString('hex');
